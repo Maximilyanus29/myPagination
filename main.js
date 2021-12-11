@@ -38,6 +38,17 @@ class Pagination {
                 this.biasLinks();
             }
         })
+
+        this.showMoreButton.addEventListener('click', evt => {
+            evt.preventDefault();
+            if (this.pages !== this.currentPage) {
+                this.currentPage++;
+                this.biasLinks();
+
+            }
+
+
+        })
     }
 
 
@@ -68,7 +79,7 @@ class Pagination {
 
         this.linksContainer = [];
 
-        for (let j = 1; i <= this.pages; startPosition++, j++) {
+        for (let j = 1; startPosition <= this.pages; startPosition++, j++) {
 
 
 
